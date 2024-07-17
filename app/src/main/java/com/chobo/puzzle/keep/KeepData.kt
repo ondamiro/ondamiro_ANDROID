@@ -35,7 +35,7 @@ object KeepDatas {
                         "밀폐용기에 라벨을 붙이고 날짜를 적는다\n" +
                         "밀폐용기를 냉장실에 넣는다\n" +
                         "필요할 때 꺼내서 사용한다",
-                foodImg = "https://example.com/lettuce.jpg",
+                foodImg = "https://i.namu.wiki/i/7GPYA0gkxbTbAYgIh5B9e7U26mxNyvtZlhNV2hjec0uKJbl6TVKkbTuKWOUGE40I5vhE9nJjNOZRaRhBM7YohZFD4jMzcINENdQbm3JLtixbw733KWTDC2TX4QXgZp2GfaCqChtCBK5Dlx1WlV9ITw.webp",
                 category = CharCategory.VEGETABLE
             )
         )
@@ -47,7 +47,7 @@ object KeepDatas {
                         "밀폐용기에 라벨을 붙이고 날짜를 적는다\n" +
                         "밀폐용기를 냉장실에 넣는다\n" +
                         "필요할 때 꺼내서 사용한다",
-                foodImg = "https://example.com/strawberry.jpg",
+                foodImg = "https://i.namu.wiki/i/wp-K2OQgxxJLEk_gmmgKVl752OqBJCApZFeb-0e5e6tXVEO51SGptvTarykkAeSvp4Tq0XWm1rwRt-zLJI6bNCi01cNi2iRpUOyGkNh1U8eMj2xqsjRN4S7gZDFhEo0YFgjI3qGoYjkp4GV73nBf1A.jpg",
                 category = CharCategory.FRUIT
             )
         )
@@ -59,7 +59,7 @@ object KeepDatas {
                         "밀폐용기에 라벨을 붙이고 날짜를 적는다\n" +
                         "밀폐용기를 냉장실에 넣는다\n" +
                         "필요할 때 꺼내서 데워 먹는다",
-                foodImg = "https://example.com/cooked_food.jpg",
+                foodImg = "https://www.adobe.com/kr/creativecloud/photography/hub/features/media_19243bf806dc1c5a3532f3e32f4c14d44f81cae9f.jpeg?width=2000&format=webply&optimize=medium",
                 category = CharCategory.COOKED_FOOD
             )
         )

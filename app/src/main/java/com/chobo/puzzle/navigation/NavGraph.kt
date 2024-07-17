@@ -7,7 +7,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.chobo.puzzle.keep.KeepScreen
 import com.chobo.puzzle.MyScreen
-import com.chobo.puzzle.TogetherScreen
+import com.chobo.puzzle.together.TogetherScreen
+import com.chobo.puzzle.keep.KeepDatas
+import com.chobo.puzzle.keep.StorageMethodScreen
 import com.chobo.puzzle.share.Screen.RecipeScreen
 import com.chobo.puzzle.share.ShareDatas
 import com.chobo.puzzle.share.Screen.ShareScreen
@@ -22,7 +24,7 @@ fun NavigationGraph(navController: NavHostController, modifier: Modifier = Modif
             ShareScreen(cards = ShareDatas.getShare(), navController = navController)
         }
         composable("Keep") {
-            KeepScreen()
+            KeepScreen(keeps = KeepDatas.getKeep(), navController = navController)
         }
         composable("Mypage") {
             MyScreen()
@@ -31,6 +33,10 @@ fun NavigationGraph(navController: NavHostController, modifier: Modifier = Modif
         composable("Recipe/{title}") { backStackEntry ->
             val title = backStackEntry.arguments?.getString("title") ?: ""
             RecipeScreen(title = title, cards = ShareDatas.getShare(), navController = navController)
+        }
+        composable("StorageMethod/{title}") { backStackEntry ->
+            val title = backStackEntry.arguments?.getString("title") ?: ""
+            StorageMethodScreen(keeps = KeepDatas.getKeep(), title = title, navController = navController)
         }
     }
 }

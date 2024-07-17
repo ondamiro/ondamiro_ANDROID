@@ -1,4 +1,4 @@
-package com.chobo.puzzle
+package com.chobo.puzzle.together
 
 import androidx.compose.runtime.Composable
 

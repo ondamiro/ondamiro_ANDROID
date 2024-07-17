@@ -45,7 +45,7 @@ fun RecipeScreen(
             .fillMaxWidth(1f)
             .height(35.dp)
         ){
-            IconButton(onClick = { navController.navigate("Share") },
+            IconButton(onClick = { navController.popBackStack() },
                 modifier = Modifier
                     .padding(start = 13.dp, top = 10.dp)
             ) {
