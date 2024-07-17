@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import com.chobo.puzzle.R
+import com.chobo.puzzle.navigation.BottomBar
 
 @Composable
 fun BottomBarScreen(
@@ -40,14 +41,14 @@ fun BottomBarScreen(
         items.forEach { item ->
             BottomNavigationItem(
                 icon = {
+                    val iconColor = if (currentRoute == item.rout) Color(0xffFF462D) else Color(0xffBCBCBC)
                     Icon(
                         ImageVector.vectorResource(id = item.icon),
                         contentDescription = item.label,
+                        tint = iconColor, // Use tint to dynamically change icon color
                         modifier = Modifier.width(26.dp).height(26.dp)
                     )
                 },
-                selectedContentColor = MaterialTheme.colors.primary,
-                unselectedContentColor = Gray,
                 selected = currentRoute == item.rout,
                 alwaysShowLabel = false,
                 onClick = {

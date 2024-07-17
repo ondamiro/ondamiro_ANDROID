@@ -13,12 +13,16 @@ import com.chobo.puzzle.keep.StorageMethodScreen
 import com.chobo.puzzle.share.Screen.RecipeScreen
 import com.chobo.puzzle.share.ShareDatas
 import com.chobo.puzzle.share.Screen.ShareScreen
+import com.chobo.puzzle.together.BuyScreen
+import com.chobo.puzzle.together.TogetherDatas
+import com.chobo.puzzle.user.UserData
+import com.chobo.puzzle.user.UserDatass
 
 @Composable
 fun NavigationGraph(navController: NavHostController, modifier: Modifier = Modifier) {
     NavHost(navController = navController, startDestination = "Share", modifier = modifier) {
         composable("Together") {
-            TogetherScreen()
+            TogetherScreen(Togethers = TogetherDatas.getTogether(), navController = navController, userData = UserDatass.userData)
         }
         composable("Share") {
             ShareScreen(cards = ShareDatas.getShare(), navController = navController)
@@ -27,7 +31,7 @@ fun NavigationGraph(navController: NavHostController, modifier: Modifier = Modif
             KeepScreen(keeps = KeepDatas.getKeep(), navController = navController)
         }
         composable("Mypage") {
-            MyScreen()
+            MyScreen(User = UserDatass.userData)
         }
 
         composable("Recipe/{title}") { backStackEntry ->
@@ -37,6 +41,10 @@ fun NavigationGraph(navController: NavHostController, modifier: Modifier = Modif
         composable("StorageMethod/{title}") { backStackEntry ->
             val title = backStackEntry.arguments?.getString("title") ?: ""
             StorageMethodScreen(keeps = KeepDatas.getKeep(), title = title, navController = navController)
+        }
+        composable("BuyPage/{title}") { backStackEntry ->
+            val title = backStackEntry.arguments?.getString("title") ?: ""
+            BuyScreen(togethers = TogetherDatas.getTogether(), title = title, userData = UserDatass.userData, navController = navController)
         }
     }
 }
